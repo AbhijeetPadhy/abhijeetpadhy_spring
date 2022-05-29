@@ -49,4 +49,14 @@ public class WebController {
         model.addAttribute("username", username);
         return "user";
     }
+
+    @GetMapping("/login")
+    public String getLoginPage(Model model){
+        return "login";
+    }
+
+    @GetMapping(value="/logout-success")
+    public String getLogoutPage(Model model){
+        return "logout";
+    }
 }
